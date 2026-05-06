@@ -18,6 +18,7 @@ const AdminPanel = () => {
 
   useEffect(() => {
     fetchMainData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchMainData = async () => {
@@ -62,6 +63,7 @@ const AdminPanel = () => {
 
   useEffect(() => {
     fetchTabSpecificData(activeTab);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeTab, selectedPharmacy]);
 
   /* ================= ORDERS ================= */
