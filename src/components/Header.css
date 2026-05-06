@@ -1,0 +1,168 @@
+/* Professional Header Styles */
+.header {
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+  height: 72px;
+}
+
+/* Role-based Theming */
+.header-admin {
+  border-top: 4px solid var(--text-main);
+}
+
+.header-pharmacy_staff {
+  border-top: 4px solid var(--success);
+}
+
+.header-delivery_person {
+  border-top: 4px solid var(--warning);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.logo-text {
+  letter-spacing: -0.02em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.15s;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-login {
+  color: var(--primary);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+
+.btn-register {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: background-color 0.15s;
+}
+
+.btn-register:hover {
+  background-color: var(--primary-dark);
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1010;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.btn-logout {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  background: transparent;
+}
+
+.btn-logout:hover {
+  color: var(--danger);
+}
+
+.cart-button {
+  position: relative;
+  background: transparent;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  transition: transform 0.1s;
+}
+
+.cart-button:hover {
+  transform: scale(1.1);
+  color: var(--primary);
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--danger);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  height: 1.2rem;
+  min-width: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 2px solid white;
+}
+
+/* Mobile Menu */
+.mobile-menu-button {
+  display: none;
+  background: transparent;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  /* Mobile nav state would go here */
+}
